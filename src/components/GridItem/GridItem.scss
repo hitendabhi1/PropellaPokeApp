@@ -1,0 +1,52 @@
+.app__grid-item {
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+        &:before {
+            background-color: rgba(255, 203, 5, 0.9);
+        }
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 3.125rem;
+        height: 3.125rem;
+        border-radius: 3.125rem;
+        z-index: 1;
+        transition: background 0.3s ease-in;
+
+        @media ( min-width: 764px ) {
+            width: 5.125rem;
+            height: 5.125rem;
+        }
+    }
+
+    &--active {
+        &:before {
+            background-color: rgba(255, 203, 5, 0.9);
+        }
+    }
+
+    &__image {
+        width: 4.125rem;
+        height: 4.125rem;
+        margin: .3em;
+        position: relative;
+        z-index: 5;
+
+        @media ( min-width: 700px ) {
+            width: 7.125rem;
+            height: 7.125rem;
+        }
+    }
+
+    &__name {
+        text-transform: capitalize;
+        margin-left: 1em;
+    } 
+}
